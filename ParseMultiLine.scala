@@ -21,10 +21,10 @@ import org.apache.spark.sql.SQLContext
 import org.apache.spark.sql.SparkSession
 
 object parse extends App{
-  val spark = SparkSession
-      .args()
-      .appName("Parse Multi Line")
-      .getOrCreate()
+ val spark = SparkSession
+   .builder()
+   .appName("SparkSessionZipsExample")
+   .getOrCreate()
   
   // Set the logs for ERROR
   Logger.getLogger("org").setLevel(Level.ERROR)
